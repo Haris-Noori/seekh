@@ -533,7 +533,7 @@
 					<ul class="links">
 						<li><a href="#0">Admission</a></li>
 						<li><a href="#0">About</a></li>
-						<li><a href="#0">Login</a></li>
+						<li><a href="login.html">Login</a></li>
 						<li><a href="#0">Register</a></li>
 						<li><a href="#0">News &amp; Events</a></li>
 						<li><a href="#0">Contacts</a></li>
