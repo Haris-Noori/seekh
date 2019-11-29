@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Udema a modern educational site template">
     <meta name="author" content="Ansonika">
-    <title>UDEMA | Modern Educational site template</title>
+    <title>Courses List | UDEMA | Modern Educational site template</title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -40,7 +43,18 @@
 			<a href="index.php"><img src="img/logo.png" width="149" height="42" data-retina="true" alt=""></a>
 		</div>
 		<ul id="top_menu">
-			<li><a href="login.html" class="login">Login</a></li>
+            <?php
+                if(!isset($_SESSION["student"]))
+                {
+                    echo ' <li><a href="login.html" class="login">Login</a></li> ';
+                }
+                else{
+                    ?> <li style="color: whitesmoke"> <?php echo $_SESSION["student"]; ?> </li>
+                    <li style="color: whitesmoke"><a href="logout.php">Logout</a></li>
+                    <?php
+                    //echo '<li><a href="#0" class="search-overlay-menu-btn">Search</a></li>';
+                }
+            ?>
 			<li><a href="#0" class="search-overlay-menu-btn">Search</a></li>
 			<li class="hidden_tablet"><a href="admission.html" class="btn_1 rounded">Admission</a></li>
 		</ul>
@@ -68,7 +82,7 @@
 					<ul>
 						<li><a href="courses-grid.html">Courses grid</a></li>
 						<li><a href="courses-grid-sidebar.html">Courses grid sidebar</a></li>
-						<li><a href="courses-list.html">Courses list</a></li>
+						<li><a href="courses-list.php">Courses list</a></li>
 						<li><a href="courses-list-sidebar.html">Courses list sidebar</a></li>
 						<li><a href="course-detail.html">Course detail</a></li>
                         <li><a href="course-detail-2.html">Course detail working form</a></li>
@@ -356,7 +370,7 @@
 					<ul class="links">
 						<li><a href="#0">Admission</a></li>
 						<li><a href="#0">About</a></li>
-						<li><a href="#0">Login</a></li>
+                        <li><a href="login.html">Login</a></li>
 						<li><a href="#0">Register</a></li>
 						<li><a href="#0">News &amp; Events</a></li>
 						<li><a href="#0">Contacts</a></li>
