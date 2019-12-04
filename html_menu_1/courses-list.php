@@ -1,4 +1,5 @@
 <?php
+    include "../connect.php";
     session_start();
 ?>
 <!DOCTYPE html>
@@ -56,7 +57,7 @@
                 }
             ?>
 			<li><a href="#0" class="search-overlay-menu-btn">Search</a></li>
-			<li class="hidden_tablet"><a href="admission.html" class="btn_1 rounded">Admission</a></li>
+			<li class="hidden_tablet"><a href="admission.php" class="btn_1 rounded">Admission</a></li>
 		</ul>
 		<!-- /top_menu -->
 		<a href="#menu" class="btn_mobile">
@@ -86,7 +87,7 @@
 						<li><a href="courses-list-sidebar.html">Courses list sidebar</a></li>
 						<li><a href="course-detail.html">Course detail</a></li>
                         <li><a href="course-detail-2.html">Course detail working form</a></li>
-						<li><a href="admission.html">Admission wizard</a></li>
+						<li><a href="admission.php">Admission wizard</a></li>
 						<li><a href="teacher-detail.html">Teacher detail</a></li>
 					</ul>
 				</li>
@@ -177,140 +178,60 @@
 		<!-- /filters -->
 
 		<div class="container margin_60_35">
-			<div class="box_list wow">
-				<div class="row no-gutters">
-					<div class="col-lg-5">
-						<figure class="block-reveal">
-							<div class="block-horizzontal"></div>
-							<a href="course-detail.html"><img src="http://via.placeholder.com/800x533/ccc/fff/course__list_1.jpg" class="img-fluid" alt=""></a>
-							<div class="preview"><span>Preview course</span></div>
-						</figure>
-					</div>
-					<div class="col-lg-7">
-						<div class="wrapper">
-							<a href="#0" class="wish_bt"></a>
-							<div class="price">$39</div>
-							<small>Category</small>
-							<h3>Persius delenit has cu</h3>
-							<p>Dicam diceret ut ius, no epicuri dissentiet philosophia vix. Usu decore percipitur definitiones ex, nihil utinam recusabo mel no. </p>
-							<div class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i><i class="icon_star"></i> <small>(145)</small></div>
-						</div>
-						<ul>
-							<li><i class="icon_clock_alt"></i> 1h 30min</li>
-							<li><i class="icon_like"></i> 890</li>
-							<li><a href="course-detail.html">Enroll now</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- /box_list -->
-			<div class="box_list wow">
-				<div class="row no-gutters">
-					<div class="col-lg-5">
-						<figure class="block-reveal">
-							<div class="block-horizzontal"></div>
-							<a href="course-detail.html"><img src="http://via.placeholder.com/800x533/ccc/fff/course__list_2.jpg" class="img-fluid" alt=""></a>
-							<div class="preview"><span>Preview course</span></div>
-						</figure>
-					</div>
-					<div class="col-lg-7">
-						<div class="wrapper">
-							<a href="#0" class="wish_bt"></a>
-							<div class="price">$25</div>
-							<small>Category</small>
-							<h3>At deseruisse scriptorem</h3>
-							<p>Dicam diceret ut ius, no epicuri dissentiet philosophia vix. Id usu zril tacimates neglegentur. Eam id legimus torquatos cotidieque, usu decore percipitur definitiones ex, nihil utinam recusabo mel no. </p>
-							<div class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i><i class="icon_star"></i> <small>(145)</small></div>
-						</div>
-						<ul>
-							<li><i class="icon_clock_alt"></i> 1h 30min</li>
-							<li><i class="icon_like"></i> 890</li>
-							<li><a href="course-detail.html">Enroll now</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- /box_list -->
-			<div class="box_list wow">
-				<div class="row no-gutters">
-					<div class="col-lg-5">
-						<figure class="block-reveal">
-							<div class="block-horizzontal"></div>
-							<a href="course-detail.html"><img src="http://via.placeholder.com/800x533/ccc/fff/course__list_3.jpg" class="img-fluid" alt=""></a>
-							<div class="preview"><span>Preview course</span></div>
-						</figure>
-					</div>
-					<div class="col-lg-7">
-						<div class="wrapper">
-							<a href="#0" class="wish_bt"></a>
-							<div class="price">$120</div>
-							<small>Category</small>
-							<h3>Ea vel semper quaerendum</h3>
-							<p>Dicam diceret ut ius, no epicuri dissentiet philosophia vix. Id usu zril tacimates neglegentur. Eam id legimus torquatos cotidieque, usu decore percipitur definitiones ex, nihil utinam recusabo mel no. </p>
-							<div class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i><i class="icon_star"></i> <small>(145)</small></div>
-						</div>
-						<ul>
-							<li><i class="icon_clock_alt"></i> 1h 30min</li>
-							<li><i class="icon_like"></i> 890</li>
-							<li><a href="course-detail.html">Enroll now</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- /box_list -->
-			<div class="box_list wow">
-				<div class="row no-gutters">
-					<div class="col-lg-5">
-						<figure class="block-reveal">
-							<div class="block-horizzontal"></div>
-							<a href="course-detail.html"><img src="http://via.placeholder.com/800x533/ccc/fff/course__list_4.jpg" class="img-fluid" alt=""></a>
-							<div class="preview"><span>Preview course</span></div>
-						</figure>
-					</div>
-					<div class="col-lg-7">
-						<div class="wrapper">
-							<a href="#0" class="wish_bt"></a>
-							<div class="price">$54</div>
-							<small>Category</small>
-							<h3>Ei has exerci graecis</h3>
-							<p>Dicam diceret ut ius, no epicuri dissentiet philosophia vix. Id usu zril tacimates neglegentur. Eam id legimus torquatos cotidieque, usu decore percipitur definitiones ex, nihil utinam recusabo mel no. </p>
-							<div class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i><i class="icon_star"></i> <small>(145)</small></div>
-						</div>
-						<ul>
-							<li><i class="icon_clock_alt"></i> 1h 30min</li>
-							<li><i class="icon_like"></i> 890</li>
-							<li><a href="course-detail.html">Enroll now</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- /box_list -->
-			<div class="box_list wow">
-				<div class="row no-gutters">
-					<div class="col-lg-5">
-						<figure class="block-reveal">
-							<div class="block-horizzontal"></div>
-							<a href="course-detail.html"><img src="http://via.placeholder.com/800x533/ccc/fff/course__list_5.jpg" class="img-fluid" alt=""></a>
-							<div class="preview"><span>Preview course</span></div>
-						</figure>
-					</div>
-					<div class="col-lg-7">
-						<div class="wrapper">
-							<a href="#0" class="wish_bt"></a>
-							<div class="price">$60</div>
-							<small>Category</small>
-							<h3>Decore tractatos</h3>
-							<p>Dicam diceret ut ius, no epicuri dissentiet philosophia vix. Id usu zril tacimates neglegentur. Eam id legimus torquatos cotidieque, usu decore percipitur definitiones ex, nihil utinam recusabo mel no. </p>
-							<div class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i><i class="icon_star"></i> <small>(145)</small></div>
-						</div>
-						<ul>
-							<li><i class="icon_clock_alt"></i> 1h 30min</li>
-							<li><i class="icon_like"></i> 890</li>
-							<li><a href="course-detail.html">Enroll now</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+			<?php
+			    $qry = " SELECT * FROM course ";
+			    $res = $con->query($qry);
+			    $result = "";
+
+			    if($res->num_rows > 0)
+                {
+                    while($row = $res->fetch_assoc())
+                    {
+                        echo "<div class='box_list wow'>";
+                            echo "<div class='row no-gutters'>";
+                                echo "<div class='col-lg-5'>";
+                                    echo "<figure class='block-reveal'>";
+                                        echo "<div class='block-horizzontal'></div>";
+                                        echo "<a href='course-detail.html'><img src='http://via.placeholder.com/800x533/ccc/fff/course__list_1.jpg' class='img-fluid' alt=''> </a> ";
+                                        echo " <div class='preview'><span>Preview course</span></div> ";
+                                    echo "</figure>";
+                                echo "</div>";
+                                echo "<div class='col-lg-7'>";
+                                    echo "<div class='wrapper'>";
+                                        echo "<a href='#0' class='wish_bt'></a>";
+                                        echo "<div class='price'>$ ".$row["Price"]." </div>";
+                                        echo "<small>Category: ".$row['Category']." </small>";
+                                        echo "<h3> ".$row['Course_Title']."</h3>";
+                                        echo "<p> ".$row['Course_Description']." </p>";
+                                        echo "<div class='rating'><i class='icon_star voted'></i><i class='icon_star voted'></i><i class='icon_star voted'></i><i class='icon_star'></i><i class='icon_star'></i> <small>(145)</small></div>";
+                                    echo "</div>";
+                                    echo "<ul>";
+                                        echo "<li> ".$row['Teacher']." </li>";
+                                        echo "<li> ".$row['Start_Date']." </li>";
+
+                                        if(isset($_SESSION["student"]))
+                                        {
+                                            echo "<li><a href='enroll.php?course=".$row["Course_Title"]." &student=".$_SESSION["student"]."  '> Enroll Now </a></li>";
+                                            if(isset($_GET["Message"]))
+                                            {
+                                                echo "<li> ".$_GET['Message']." </li>";
+                                            }
+                                        }
+                                        else
+                                        {
+                                            echo "<li><a href='login.html'>Login To Enroll</a></li>";
+                                        }
+                                    echo "</ul>";
+                                echo "</div>";
+                            echo "</div>";
+                        echo "</div>";
+                    }
+                }
+			    else{
+			        echo "No Courses Available";
+                }
+
+			?>
 			<!-- /box_list -->
 			<p class="text-center add_top_60"><a href="#0" class="btn_1">Load more</a></p>
 		</div>

@@ -58,7 +58,7 @@
             ?>
 
 			<li><a href="#0" class="search-overlay-menu-btn">Search</a></li>
-			<li class="hidden_tablet"><a href="admission.html" class="btn_1 rounded">Admission</a></li>
+			<li class="hidden_tablet"><a href="admission.php" class="btn_1 rounded">Admission</a></li>
 		</ul>
 		<!-- /top_menu -->
 		<a href="#menu" class="btn_mobile">
@@ -99,7 +99,7 @@
 						<li><a href="courses-list-sidebar.html">Courses list sidebar</a></li>
 						<li><a href="course-detail.html">Course detail</a></li>
                         <li><a href="course-detail-2.html">Course detail working form</a></li>
-						<li><a href="admission.html">Admission wizard</a></li>
+						<li><a href="admission.php">Admission wizard</a></li>
 						<li><a href="teacher-detail.html">Teacher detail</a></li>
 					</ul>
 				</li>

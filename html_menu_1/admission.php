@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Udema a modern educational site template">
     <meta name="author" content="Ansonika">
-    <title>UDEMA | Modern Educational site template</title>
+    <title>Admission | UDEMA | Modern Educational site template</title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -50,7 +50,7 @@
 				<div id="progressbar"></div>
 			</div>
 			<!-- /top-wizard -->
-			<form name="example-1" id="wrapped" method="POST">
+			<form name="example-1" id="wrapped" method="POST" action="admission_send.php">
 				<input id="website" name="website" type="text" value="">
 				<!-- Leave for security protection, read docs for details -->
 				<div id="middle-wizard">
@@ -58,7 +58,7 @@
 						<div id="intro">
 							<figure><img src="img/wizard_intro_icon.svg" alt=""></figure>
 							<h1>Admission Apply</h1>
-							<p>Exerci tibique eum cu, paulo appellantur et mei, ea partem urbanitas vim. His ei iusto nonumes atomorum. Mentitum pericula in nec. In eos habemus tibique. </p>
+							<p>Exercise tibique eum cu, paulo appellantur et mei, ea partem urbanitas vim. His ei iusto nonumes atomorum. Mentitum pericula in nec. In eos habemus tibique. </p>
 							<p><strong>Mel erant legere iuvaret ea. At eum doctus voluptatibus, has id veritus constituam.</strong></p>
 						</div>
 					</div>
@@ -125,37 +125,45 @@
 					<!-- /step-->
 
 					<div class="submit step">
-						<h3 class="main_question"><strong>3/3</strong>Your preferences</h3>
+						<h3 class="main_question"><strong>3/3</strong>Your priority</h3>
 						<div class="form-group radio_input">
-							<label><input type="checkbox" value="Management" name="preferences[]" class="icheck">Management adn Business</label>
+							<label><input type="checkbox" value="Management" name="preferences" class="icheck">Management adn Business</label>
 						</div>
 						<div class="form-group radio_input">
-							<label><input type="checkbox" value="Art" name="preferences[]" class="icheck">Art: Impressionist</label>
+							<label><input type="checkbox" value="Art" name="preferences" class="icheck">Art: Impressionist</label>
 						</div>
 						<div class="form-group radio_input">
-							<label><input type="checkbox" value="Litteratture" name="preferences[]" class="icheck">Litteratture: Poetry</label>
+							<label><input type="checkbox" value="Litteratture" name="preferences" class="icheck">Litteratture: Poetry</label>
 						</div>
 						<div class="form-group radio_input">
-							<label><input type="checkbox" value="Math" name="preferences[]" class="icheck">Math: 12 Principles</label>
+							<label><input type="checkbox" value="Math" name="preferences" class="icheck">Math: 12 Principles</label>
 						</div>
 						<div class="form-group radio_input">
-							<label><input type="checkbox" value="Architecture" name="preferences[]" class="icheck">Architecture</label>
+							<label><input type="checkbox" value="Architecture" name="preferences" class="icheck">Architecture</label>
 						</div>
 						<div class="form-group add_top_30">
 							<textarea name="additional_message" class="form-control required" style="height:120px;" placeholder="Hello world....write your messagere here!"></textarea>
 						</div>
 						<div class="form-group terms">
-							<input name="terms" type="checkbox" class="icheck required" value="yes">
-							<label>Please accept <a href="#" data-toggle="modal" data-target="#terms-txt">terms and conditions</a> ?</label>
+<!--							<input name="terms" type="checkbox" class="icheck required" value="yes">-->
+							<label>Please read <a href="#" data-toggle="modal" data-target="#terms-txt">terms and conditions</a></label>
 						</div>
 					</div>
 					<!-- /step-->
 				</div>
 				<!-- /middle-wizard -->
 				<div id="bottom-wizard">
-					<button type="button" name="backward" class="backward">Backward </button>
-					<button type="button" name="forward" class="forward">Forward</button>
+<!--					<button type="button" name="backward" class="backward">Backward </button>-->
+<!--					<button type="button" name="forward" class="forward">Forward</button>-->
 					<button type="submit" name="process" class="submit">Submit</button>
+					<?php
+						if(isset($_GET["Message"]))
+						{
+							echo "<script>alert(' ";
+							echo $_GET["Message"];
+							echo " ')</script>";
+						}
+					?>
 				</div>
 				<!-- /bottom-wizard -->
 			</form>
@@ -197,7 +205,7 @@
 	<script src="js/jquery-ui-1.8.22.min.js"></script>
 	<script src="js/jquery.wizard.js"></script>
 	<script src="js/jquery.validate.js"></script>
-	<script src="js/admission_func.js"></script>
+<!--	<script src="js/admission_func.js"></script>-->
   
 </body>
 </html>
