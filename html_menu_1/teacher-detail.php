@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Udema a modern educational site template">
     <meta name="author" content="Ansonika">
-    <title>UDEMA | Modern Educational site template</title>
+    <title>Teacher | UDEMA | Modern Educational site template</title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -40,7 +43,18 @@
 			<a href="index.php"><img src="img/logo.png" width="149" height="42" data-retina="true" alt=""></a>
 		</div>
 		<ul id="top_menu">
-			<li><a href="login.html" class="login">Login</a></li>
+            <?php
+            if(!isset($_SESSION["teacher"]))
+            {
+                echo ' <li><a href="teacher-login.html" class="login">Login</a></li> ';
+            }
+            else{
+                ?> <li style="color: yellow"> <?php echo $_SESSION["teacher"]; ?> </li>
+                <li ><a href="logout.php" style="color: lightcoral">Logout</a></li>
+                <?php
+                //echo '<li><a href="#0" class="search-overlay-menu-btn">Search</a></li>';
+            }
+            ?>
 			<li><a href="#0" class="search-overlay-menu-btn">Search</a></li>
 			<li class="hidden_tablet"><a href="admission.php" class="btn_1 rounded">Admission</a></li>
 		</ul>
@@ -73,7 +87,7 @@
 						<li><a href="course-detail.html">Course detail</a></li>
                         <li><a href="course-detail-2.html">Course detail working form</a></li>
 						<li><a href="admission.php">Admission wizard</a></li>
-						<li><a href="teacher-detail.html">Teacher detail</a></li>
+						<li><a href="teacher-detail.php">Teacher detail</a></li>
 					</ul>
 				</li>
 				<li><span><a href="#0">Pages</a></span>
@@ -153,7 +167,7 @@
 					<div class="box_teacher">
 						<div class="indent_title_in">
 							<i class="pe-7s-user"></i>
-							<h3>Profile</h3>
+							<h3> <?php echo $_SESSION["teacher"] ?> </h3>
 							<p>Mussum ipsum cacilds, vidis litro abertis.</p>
 						</div>
 						<div class="wrapper_indent">
